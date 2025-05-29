@@ -11,7 +11,7 @@ import cartopy.feature as cfeature
 ############################################################################################################
 
 # Load the NetCDF dataset containing ocean current data
-data = xr.open_dataset('../data/oscar_currents_nrt_20210101.nc')  # Replace with your file path
+data = xr.open_dataset('../data/oscar_currents_nrt_20210101.nc')
 
 # Select the first time slice of the zonal and meridional currents
 zonalCurrent = data['u'].isel(time=0)        # Shape: (1440, 719)
